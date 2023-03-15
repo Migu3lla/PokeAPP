@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title={poke.Name}>
+        
+        <img class="poke slds-align_absolute-center slds-var-m-around_medium slds-var-m-around_x-large"
+        src={poke.Imagen__c}
+        alt={poke.Name}
+        onclick={navigateToRecordViewPage}>
+    
+        <div class="slds-var-m-left_large">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+        <p class="slds-var-m-bottom_xx-small">Vida: {poke.statshp__c}</p>
+        <p class="slds-var-m-bottom_xx-small">Altura: {poke.heigth__c} mts.</p>
+        <p class="slds-var-m-bottom_xx-small">Peso: {poke.weigth__c} kg.</p>
+                </div>
+                <div class="slds-col st" >
+        <p class="slds-var-m-bottom_xx-small">Velocidad: {poke.StatsSpeed__c} </p>
+        <p class="slds-var-m-bottom_xx-small">Defensa: {poke.StatsDefense__c} </p>
+        <p class="slds-var-m-bottom_xx-small">Ataque: {poke.StatsAttack__c} </p>
+                </div>
+            </div>
+        </div>
+
+
+    </lightning-card>
+</template>

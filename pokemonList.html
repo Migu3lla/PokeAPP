@@ -1,0 +1,34 @@
+<template>
+   
+
+    <div class="slds-align_absolute-center">
+        
+    <div class="slds-grid slds-wrap slds-grid_align-spread grid">
+        
+        <lightning-input type="search"
+        onchange={handleSearchTermChange}
+        variant="label-hidden"
+        class="slds-var-m-bottom_small"
+        label="Search"
+        placeholder="Search for pokemon"
+        value={name}>
+    </lightning-input>
+    
+    
+    <template if:true={pokemon}>
+    <lightning-layout multiple-rows="true" pull-to-boundary="small">
+       
+        <template for:each={pokemon.data} for:item="p">
+            <lightning-layout-item key={p.name} class="slds-var-p-around_x-small">
+                <c-pokemon-tile poke={p} ></c-pokemon-tile>
+            </lightning-layout-item>
+        
+    </template>
+    </lightning-layout>
+    </template>
+
+
+</div>
+
+    </div>
+</template>
